@@ -14,6 +14,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.headerNav ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 10%;
+}
+.headerNav li{
+  width: 30%;
+}
 .breedsList{
   color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

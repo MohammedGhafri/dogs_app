@@ -5,6 +5,7 @@ export default function Breeds(props) {
     //   function testme(key){
     // // console.log(key)
     // console.log(Object.values(props.dogs.message[key]))
+    // console.log(props)
     return (
         <div>
 
