@@ -15,12 +15,18 @@ export default function SubBreedImages(props) {
     return (
         <>
             <Header />
-            <section>
+            <section className='sectionSubBreed'>
             {
 
                 props.subDogsbreeds.map(item=>item.map(item2=>
-                    <div>{
+                    <div className='mainDivSub'>
+                        
+                        <p className='nameOfSubBreed'>{item2.name}</p>
+                        <div className='divforImagesSubBreed'>
+                        {
                         item2.image.map(item3=><img src={item3}/>)}
+
+                        </div>
                     </div>))
             }
             </section>
@@ -63,7 +69,7 @@ export async function getServerSideProps() {
             let subBreed = valuesArray[j]
             const res2 = await fetch(`https://dog.ceo/api/breed/${breed}/${subBreed}/images`)
             var myData2 = await res2.json();
-            images.push({name:subBreed,image:myData2.message})
+            images.push({name:breed +': '+subBreed,image:myData2.message})
             // console.log(myData2.message)
 
 
