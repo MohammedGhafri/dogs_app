@@ -5,25 +5,31 @@ import Breeds from '../components/breedsFun'
 // import BreedRandImg from '../components/breedImg'
 import Bri from '../components/breedImg'
 
+
+function randomNumber(limit){
+  let a =Math.floor(Math.random() * limit) + 1
+  // console.log(a,"from index",limit)
+  return a
+}
 export default function Home(props) {
- 
+//  console.log(Object.values(props.dogs.message['australian']))
 
   return (
     <>
       <Header />
 
-      <div className='breedsList'>
-        <h1>Ghafri</h1>
+        <h1><abbr  title='Engineer'>Eng</abbr>Ghafri</h1>
         <h3>Breeds that are exist</h3>
+      <div className='breedsList'>
         {Object.keys(props.dogs.message).map((item) =>
 
 
 
-  <div><p>{item}</p>
-  {/* <img src={`https://dog.ceo/api/breed/item/images`} /> */}
-  {/* <BreedRandImg id={item}/> */}
-  <Bri id={item}/>
-    <strong>{props.dogs.message[item].length? <Breeds subBreed={item} arr={props.dogs.message}/>:null}</strong></div>   
+  <div><p>{item.replace(/\b\w/g, l => l.toUpperCase())}</p>
+  
+  <Bri id={item} lim={randomNumber(Object.values(props.dogs.message[item]).length)}/>
+  
+    <strong>{props.dogs.message[item].length? <Breeds  subBreed={item} arr={props.dogs.message}/>:null}</strong></div>   
   
 
 

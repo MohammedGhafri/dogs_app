@@ -2,15 +2,16 @@ import Link from 'next/link'
 function Header() {
     return (
         <>
-            <nav>
+            <nav className='headerNav'>
                 <ul>
                     <li>
                         <Link href='/'>
-                            <a>Home</a>
+                            <a><abbr title='Home Page shows up the main breeds'>Home</abbr></a>
                         </Link>
                     </li>
-
-                    <li>About</li>
+<Link href='/subBreed'>
+                    <li><a><abbr title='Page shows up the sub breeds'>Sub Breeds</abbr></a></li>
+</Link>
 
                 </ul>
             </nav>
