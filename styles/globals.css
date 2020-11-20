@@ -19,7 +19,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding-left: 10%;
+  padding-left: 15%;
   list-style: none;
 }
 .headerNav li{
@@ -69,4 +69,89 @@ a {
   display: block;
   width: 100%;
   text-align: center;
+}
+
+/*----------------------*/
+.headerNav{
+background: purple;
+height: 13vh;
+line-height: 12vh;
+margin-bottom: 2%;
+/* position: static; */
+}
+.headerNav a{
+  background: rgb(247, 99, 247);
+  font-size: 24px;
+}
+/*----------------*/
+
+.mainSubject{
+  text-align: center;
+}
+.paraInmain{
+  text-align: center;
+}
+.divInmain{
+  background: rgb(128, 126, 126,0.5);
+  margin: 1% 0;
+  /* height: 30vh; */
+  
+}
+.divInmain:has(strong){
+  background: red;
+}
+
+.subBreedsTexts{
+  /* display: none; */
+}
+/* .divFromBreedsFun:has() */
+.divFromBreedsFun{
+  background: rgba(216, 118, 151, 0.3);;
+}
+.divFromBreedsFun ul{
+  /* display: none; */
+  list-style: none;
+  position: relative;
+  top: -4.5vh;
+  color: aliceblue;
+  
+}
+.divFromBreedsFun p{
+position: relative;
+top: -6vh;
+background: rgba(216, 118, 151, 0.514);
+width: fit-content;
+}
+.divFromBreedsFun p:hover ~ul{
+color: blue !important;
+display: block;
+}
+
+
+.randh2{
+  text-align: center;
+}
+.randImage{
+  display: block;
+  /* text-align: center; */
+  margin-left: 33%;
+  width: 500px;
+  height: 500px;
+}
+.randPara{
+  text-align: center;
+}
+.fetchButton{
+  display: block;
+margin: 0 0 1% 47%;
+background:plum;
+width: 5%;
+height: 5vh;
+font-size: 18px;
+border: 1px solid;
+border-radius: 5%;
+}
+.fetchButton:hover{
+  color: blueviolet;
+
 }

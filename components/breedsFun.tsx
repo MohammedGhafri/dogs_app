@@ -1,19 +1,15 @@
 import Link from 'next/link'
 
 export default function Breeds(props) {
-    // console.log(props)
-    //   function testme(key){
-    // // console.log(key)
-    // console.log(Object.values(props.dogs.message[key]))
-    // console.log(props)
+  
     return (
-        <div>
-
+        <div className='divFromBreedsFun'>
+            <p>Sub Breeds</p>
             {Object.values(props.arr[props.subBreed]).map((elem) =>
-                <ul>
+                <ul className='ullll'>
                     <li>
 
-                        <Link href='/singleView/[id].tsx' as={`/singleView/${props.subBreed +'_'+elem}`}>
+                        <Link href='/singleView/[id].tsx' as={`/singleView/${props.subBreed + '_' + elem}`}>
                             <a>{elem}</a>
                         </Link>
                     </li>
@@ -26,6 +22,5 @@ export default function Breeds(props) {
 
 
 
-    // }
-    return (<p>I am here</p>)
+    
 }

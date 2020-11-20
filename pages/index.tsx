@@ -18,18 +18,18 @@ export default function Home(props) {
     <>
       <Header />
 
-        <h1><abbr  title='Engineer'>Eng</abbr>Ghafri</h1>
-        <h3>Breeds that are exist</h3>
+        <h1 className='mainSubject'>Dogs Breeds</h1>
+        {/* <h3 className=''>Breeds that are exist</h3> */}
       <div className='breedsList'>
         {Object.keys(props.dogs.message).map((item) =>
 
 
 
-  <div><p>{item.replace(/\b\w/g, l => l.toUpperCase())}</p>
+  <div className='divInmain'><p className='paraInmain'>{item.replace(/\b\w/g, l => l.toUpperCase())}</p>
   
   <Bri id={item} lim={randomNumber(Object.values(props.dogs.message[item]).length)}/>
   
-    <strong>{props.dogs.message[item].length? <Breeds  subBreed={item} arr={props.dogs.message}/>:null}</strong></div>   
+    <strong className='subBreedsTexts'>{props.dogs.message[item].length? <Breeds  subBreed={item} arr={props.dogs.message}/>:null}</strong></div>   
   
 
 
